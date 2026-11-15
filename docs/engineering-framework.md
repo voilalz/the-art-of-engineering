@@ -6,6 +6,8 @@
 
 “问题与模型”的首篇完整正文为[第1章：从一句要求，到一个工程问题](problem-and-model/ch01-from-request-to-engineering-problem.md)，对任务、场景、边界和模型作出定义，并通过公式与算例讨论数值要求的形成和证据。
 
+[第2章：单位、基准与坐标](problem-and-model/ch02-units-datums-and-coordinates.md)继续统一数据语义，重点区分运动参考、求导参考与分量表达基，并提供[物理量与基准字典模板](../templates/physical-quantity-reference-dictionary.md)。
+
 ## 怎样找到当前最需要的方法
 
 | 任务中的信号 | 先检查什么 | 需要补齐的工作产物 |
