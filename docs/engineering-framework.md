@@ -8,6 +8,8 @@
 
 [第2章：单位、基准与坐标](problem-and-model/ch02-units-datums-and-coordinates.md)继续统一数据语义，重点区分运动参考、求导参考与分量表达基，并提供[物理量与基准字典模板](../templates/physical-quantity-reference-dictionary.md)。
 
+[第3章：数量级、量纲与极限](problem-and-model/ch03-orders-dimensions-and-limits.md)讨论早期可行性判断，推导方向可靠的上下界，并用时间、力、能量和功率互相校核。配套提供[一页可行性估算模板](../templates/feasibility-estimate-and-cross-check.md)。
+
 ## 怎样找到当前最需要的方法
 
 | 任务中的信号 | 先检查什么 | 需要补齐的工作产物 |

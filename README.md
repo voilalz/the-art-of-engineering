@@ -44,13 +44,15 @@
 | --- | --- | --- |
 | 从一句要求到一个工程问题 | 正式研究正文：任务、场景、边界、模型、数值要求与验收依据 | [阅读第一章](docs/problem-and-model/ch01-from-request-to-engineering-problem.md) |
 | 单位、基准与坐标 | 正式研究正文：量值、参考、运动关系、坐标表达、时间与不确定度换算 | [阅读第二章](docs/problem-and-model/ch02-units-datums-and-coordinates.md) |
+| 数量级、量纲与极限 | 正式研究正文：物理边界、守恒、可靠上下界、尺度关系与独立校核 | [阅读第三章](docs/problem-and-model/ch03-orders-dimensions-and-limits.md) |
 | 工程概念辨析 | 区分精度、误差、分辨率与灵敏度等容易混淆的术语，并落实到工程决策 | [概念辨析入口](docs/concepts/README.md) |
 | 工程共性能力框架 | 梳理具体任务需要哪些方法、工作产物与检查动作 | [能力框架](docs/engineering-framework.md) |
 | 误差预算教学案例 | 算清独立误差、相关误差、偏差上界与总体余量的关系 | [误差预算案例](examples/error-budget.md) |
 | 工程任务记录模板 | 把一个实际任务的需求、模型、预算、接口、试验和配置串起来 | [复制模板](templates/engineering-task.md) |
 | 物理量与基准字典 | 明确数据的对象、参考、表达基、单位、时间及变换，附已填写样例 | [复制字典模板](templates/physical-quantity-reference-dictionary.md) |
+| 一页可行性估算与独立校核 | 用少量输入记录估算、边界依据、校核与当前判断 | [复制估算模板](templates/feasibility-estimate-and-cross-check.md) |
 
-当前提供能力框架、前两章正式研究正文初稿、两项概念辨析、一个完整的误差预算教学算例，以及任务记录和物理量字典两份模板。案例数值是明确假设下的计算示例；实测数据、各专业详细设计方法与计算工具将随具体问题逐步积累。
+当前提供能力框架、前三章正式研究正文初稿、两项概念辨析、一个完整的误差预算教学算例，以及任务记录、物理量字典和可行性估算三份模板。案例数值是明确假设下的计算示例；实测数据、各专业详细设计方法与计算工具将随具体问题逐步积累。
 
 ## 先把常用概念分清
 
