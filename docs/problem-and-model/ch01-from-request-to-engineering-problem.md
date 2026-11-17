@@ -208,7 +208,7 @@ $$
 | 误差分位值 | 某一比例结果不超过的误差值 | 比例、统计总体、尾部与估计方法 |
 | 确定性误差边界 | 在规定输入与条件集合内允许的界 | 集合范围、边界依据及未覆盖项 |
 
-准确度、精密度、分辨率、不确定度与允许误差之间的进一步区别，见项目的[测量性能概念辨析](https://github.com/voilalz/the-art-of-engineering/blob/main/docs/concepts/measurement-performance.md)。本章只要求将使用的口径写清，避免相互替代。
+准确度、精密度、分辨率、不确定度与允许误差之间的进一步区别，见项目的[测量性能概念辨析](https://github.com/voilalz/the-art-of-engineering/blob/main/docs/concepts/measurement-performance.md)；表中各统计口径的关系与换算前提，见[误差统计口径辨析](https://github.com/voilalz/the-art-of-engineering/blob/main/docs/concepts/error-statistics.md)。本章只要求将使用的口径写清，避免相互替代。
 
 ### 1.5.3 响应时间必须有起点与终点
 
