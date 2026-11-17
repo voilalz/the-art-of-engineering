@@ -12,6 +12,8 @@
 
 [第4章：模型、假设与适用范围](problem-and-model/ch04-models-assumptions-and-validity.md)讨论模型的组成、模型误差与参数误差的区分，以及工况变化时何时重新校准、何时重新建模。配套提供[模型卡片模板](../templates/model-card.md)。
 
+[第5章：指标分解：从总体目标到部件责任](budget-allocation-and-tradeoffs/ch05-metric-decomposition-and-responsibility.md)开始“预算、分配与取舍”部分，讨论怎样按输出的形成关系建立指标树、按指标类型选择组合关系，并以覆盖、口径一致、可回算和单一持有四个条件检查分解是否闭合。本章建立主线案例的误差与资源预算活账，配套提供[指标分解与预算活账模板](../templates/error-and-resource-budget.md)。
+
 ## 怎样找到当前最需要的方法
 
 | 任务中的信号 | 先检查什么 | 需要补齐的工作产物 |
