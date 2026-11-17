@@ -28,7 +28,7 @@ $$
 P_y\approx JP_xJ^{\mathsf T}
 $$
 
-$P_x$ 可以在随机误差模型中表示协方差，也可以在明确的测量模型中表示标准不确定度及协方差。两种解释需要说明，不能直接互换；显著相关的输入必须保留协方差项。[S1]
+$P_x$ 可以在随机误差模型中表示协方差，也可以在明确的测量模型中表示标准不确定度及协方差。两种解释需要说明，不能直接互换；显著相关的输入必须保留协方差项。[R1]
 
 对彼此不相关的输入和标量输出，简化为：
 
@@ -127,5 +127,5 @@ $$
 
 ## 参考资料
 
-- **[S1]** [JCGM 100:2008 第 5 节，ISO 官方在线正文](https://www.iso.org/sites/JCGM/GUM/JCGM100/C045315e-html/C045315e_FILES/MAIN_C045315e/05_e.html)：一阶灵敏度、合成标准不确定度与相关输入。
-- **[S2]** [BIPM：Guides in Metrology](https://www.bipm.org/en/web/guest/publications/guides)：按测量模型选择不确定度、蒙特卡洛传播与符合性评定资料，版本以官方目录为准。
+- **[R1]** [JCGM 100:2008 第 5 节，ISO 官方在线正文](https://www.iso.org/sites/JCGM/GUM/JCGM100/C045315e-html/C045315e_FILES/MAIN_C045315e/05_e.html)：一阶灵敏度、合成标准不确定度与相关输入。
+- **[R2]** [BIPM：Guides in Metrology](https://www.bipm.org/en/web/guest/publications/guides)：JCGM 100:2008（GUM）、JCGM 101:2008（蒙特卡洛传播）与 JCGM 106:2012（测量不确定度在符合性评定中的作用）。

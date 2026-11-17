@@ -29,7 +29,7 @@
 
 - **RMS 与 RMSE。** RMS 是一组量值平方平均后开方，对象可以是信号，也可以是误差。对误差序列求 RMS，就是 RMSE。对信号求 RMS 时，是否包含直流分量、窗口和带宽需要另行说明，见[第2章](../problem-and-model/ch02-units-datums-and-coordinates.md)关于有效值的讨论。
 - **标准差与 RMSE。** 两者仅在偏差为零时相等。资料中“RMS 误差”有时指去除均值后的值，实际是标准差；使用前应核对是否扣除了均值。
-- **最大误差有三种含义。** 试验样本中观察到的最大值、规定集合上的确定性边界，以及作为要求的最大允许误差 MPE。[S1] 样本最大值随样本量增长；确定性边界需要第1章式（1-10）那样的集合和依据；MPE 是要求，不是性能证据。
+- **最大误差有三种含义。** 试验样本中观察到的最大值、规定集合上的确定性边界，以及作为要求的最大允许误差 MPE。[R1] 样本最大值随样本量增长；确定性边界需要第1章式（1-10）那样的集合和依据；MPE 是要求，不是性能证据。
 - **分位值是对 $\lvert e\rvert$ 还是对 $e$。** “95% 分位值”若针对有符号误差 $e$，是一个单侧值；若针对 $\lvert e\rvert$，等价于一个对称的双侧要求。两者在正态零均值模型下分别约为 $1.645\sigma$ 与 $1.960\sigma$。本项目的定位要求指后者。
 
 ## 分位要求与概率要求是同一件事
@@ -89,7 +89,7 @@ $$
 
 几点说明：
 
-- **正态零均值。** $\lvert e\rvert\leq1.960\sigma$ 的概率为 95%；单侧 $e\leq1.645\sigma$ 的概率也是 95%，两者不能混用。GUM 在近似正态且有效自由度足够大时，用覆盖因子 $k=2$ 对应约 95% 的覆盖概率，这是约定的近似值。[S2]
+- **正态零均值。** $\lvert e\rvert\leq1.960\sigma$ 的概率为 95%；单侧 $e\leq1.645\sigma$ 的概率也是 95%，两者不能混用。GUM 在近似正态且有效自由度足够大时，用覆盖因子 $k=2$ 对应约 95% 的覆盖概率，这是约定的近似值。[R2]
 - **正态带偏差。** 偏差越大，$\lvert e\rvert$ 的分位值越接近 $\lvert b\rvert+1.645\sigma$，因为另一侧尾部几乎不再贡献超限概率；偏差为零时等于 $1.960\sigma$。因此当只知道 $\lvert b\rvert\leq B$ 时，$B+1.960\sigma$ 对所有允许的偏差都是保守的 95% 分位值上界。
 - **均匀分布。** 有界分布的最大值有意义，分位值与最大值接近；“σ 的 3 倍”对它没有意义，因为结果不可能超过 $1.732\sigma$。
 - **正弦。** RMS 与峰值的固定比例只对零直流纯正弦整周期成立；周期误差、振动等确定性信号的“分位值”是时间占比，不是重复试验的概率。
@@ -128,8 +128,8 @@ $$
 
 试验给出的是样本统计量，它本身有随机性：
 
-- **样本分位值。** 第 95 百分位需要尾部有足够样本才能估计；计算方法有多种约定，小样本下差别明显。[S3]
-- **由样本标准差推断。** 若采用正态模型，并要求以一定置信度覆盖总体的比例 p，应使用统计容忍区间系数，而不是 1.96。例如 n = 30、覆盖 95%、置信度 95% 的双侧正态容忍系数约为 2.55。[S4]
+- **样本分位值。** 第 95 百分位需要尾部有足够样本才能估计；计算方法有多种约定，小样本下差别明显。[R3]
+- **由样本标准差推断。** 若采用正态模型，并要求以一定置信度覆盖总体的比例 p，应使用统计容忍区间系数，而不是 1.96。例如 n = 30、覆盖 95%、置信度 95% 的双侧正态容忍系数约为 2.55。[R4]
 - **无分布方法。** 若 n 次独立试验中 $\lvert e\rvert$ 均未超过 $E_{\mathrm{req}}$，在 95% 置信度下支持 95% 覆盖至少需要 $n\geq\ln0.05/\ln0.95\approx59$ 次。这与第1章式（1-13）是同一个零失败二项模型，只是把“成功”定义为误差不超限。
 - **样本独立性。** 连续采样的时间序列往往相关；一段时间内取得的 1000 个点，不等于 1000 次独立重复，按独立样本计算置信度会高估证据。
 
@@ -167,9 +167,9 @@ $$
 
 ## 主要来源
 
-- **[S1]** [VIM 4.26：maximum permissible measurement error](https://jcgm.bipm.org/vim/en/4.26.html)。
-- **[S2]** [GUM 第 6 节：Determining expanded uncertainty，ISO 官方在线正文](https://www.iso.org/sites/JCGM/GUM/JCGM100/C045315e-html/C045315e_FILES/MAIN_C045315e/06_e.html)：覆盖因子与近似覆盖概率。
-- **[S3]** [NIST/SEMATECH e-Handbook 7.2.6.2：Percentiles](https://www.itl.nist.gov/div898/handbook/prc/section2/prc262.htm)：样本分位值的估计方法及其差异。
-- **[S4]** [NIST/SEMATECH e-Handbook 7.2.6.3：Tolerance intervals for a normal distribution](https://www.itl.nist.gov/div898/handbook/prc/section2/prc263.htm)：覆盖比例与置信度的容忍区间系数。
+- **[R1]** [VIM 4.26：maximum permissible measurement error](https://jcgm.bipm.org/vim/en/4.26.html)。
+- **[R2]** [GUM 第 6 节：Determining expanded uncertainty，ISO 官方在线正文](https://www.iso.org/sites/JCGM/GUM/JCGM100/C045315e-html/C045315e_FILES/MAIN_C045315e/06_e.html)：覆盖因子与近似覆盖概率。
+- **[R3]** [NIST/SEMATECH e-Handbook 7.2.6.2：Percentiles](https://www.itl.nist.gov/div898/handbook/prc/section2/prc262.htm)：样本分位值的估计方法及其差异。
+- **[R4]** [NIST/SEMATECH e-Handbook 7.2.6.3：Tolerance intervals for a normal distribution](https://www.itl.nist.gov/div898/handbook/prc/section2/prc263.htm)：覆盖比例与置信度的容忍区间系数。
 
 正态、均匀、瑞利分布的分位值，马尔可夫与切比雪夫不等式，以及样本最大值的中位数均由标准概率关系推导；案例数值按[误差预算案例](../../examples/error-budget.md)的假设计算，不代表实测设备。

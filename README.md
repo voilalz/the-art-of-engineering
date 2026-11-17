@@ -4,7 +4,7 @@
 
 一个面向机械、电子电气、仪器、控制、自动化、机器人与航空航天工程师的共性能力知识库。
 
-这里持续整理一组反复出现在不同项目中的方法：把需求写清楚，把指标分解下去，把误差与资源算明白，让部件正确连接，在真实环境中完成验证，并留下可以复用的工程资产。
+这里持续整理一组反复出现在不同项目中的方法：把要求写清楚，把指标分解下去，把误差与资源算明白，让部件正确连接，在真实环境中完成验证，并留下可以复用的工程资产。
 
 核心问题是：**怎样把局部正确的专业设计，变成可运行、可验证、可复现、可维护的工程系统？**
 
@@ -46,13 +46,14 @@
 | 单位、基准与坐标 | 正式研究正文：量值、参考、运动关系、坐标表达、时间与不确定度换算 | [阅读第二章](docs/problem-and-model/ch02-units-datums-and-coordinates.md) |
 | 数量级、量纲与极限 | 正式研究正文：物理边界、守恒、可靠上下界、尺度关系与独立校核 | [阅读第三章](docs/problem-and-model/ch03-orders-dimensions-and-limits.md) |
 | 工程概念辨析 | 区分精度、误差、分辨率、灵敏度与误差统计口径等容易混淆的术语，并落实到工程决策 | [概念辨析入口](docs/concepts/README.md) |
-| 工程共性能力框架 | 梳理具体任务需要哪些方法、工作产物与检查动作 | [能力框架](docs/engineering-framework.md) |
+| 工程共性能力框架 | 11 项能力：从要求、模型、预算、接口、控制、测量、集成、制造可靠性、安全、取舍风险到验证配置，附生命周期对照与能力分级 | [能力框架](docs/engineering-framework.md) |
+| 术语约定 | 统一“要求/需要”“偏差/误差”“余量/裕度”“故障/失效”等全库用词及其标准依据 | [术语约定](docs/terminology.md) |
 | 误差预算教学案例 | 算清独立误差、相关误差、偏差上界与总体余量的关系 | [误差预算案例](examples/error-budget.md) |
-| 工程任务记录模板 | 把一个实际任务的需求、模型、预算、接口、试验和配置串起来 | [复制模板](templates/engineering-task.md) |
+| 工程任务记录模板 | 把一个实际任务的要求、模型、预算、接口、试验和配置串起来 | [复制模板](templates/engineering-task.md) |
 | 物理量与基准字典 | 明确数据的对象、参考、表达基、单位、时间及变换，附已填写样例 | [复制字典模板](templates/physical-quantity-reference-dictionary.md) |
 | 一页可行性估算与独立校核 | 用少量输入记录估算、边界依据、校核与当前判断 | [复制估算模板](templates/feasibility-estimate-and-cross-check.md) |
 
-当前提供能力框架、前三章正式研究正文初稿、三项概念辨析、一个完整的误差预算教学算例，以及任务记录、物理量字典和可行性估算三份模板。案例数值是明确假设下的计算示例；实测数据、各专业详细设计方法与计算工具将随具体问题逐步积累。
+当前提供能力框架、术语约定、前三章正式研究正文初稿、三项概念辨析、一个完整的误差预算教学算例，以及任务记录、物理量字典和可行性估算三份模板。案例数值是明确假设下的计算示例；实测数据、各专业详细设计方法与计算工具将随具体问题逐步积累。
 
 ## 先把常用概念分清
 
@@ -79,7 +80,7 @@
 
 ## 重点方法：误差分配
 
-“总体精度 0.5 mm，各部件应该分多少”需要回答的不只是一个开方公式，还包括指标的统计含义、误差作用链、相关性、可标定性、成本和验证能力。
+“总体精度 0.5 mm，各部件应该分多少”是工程中常见的问法。“精度”在这里还不是可验证的指标，下例先把它定义为一个带工况的概率要求。回答这个问题需要的不只是一个开方公式，还包括指标的统计含义、误差作用链、相关性、可标定性、成本和验证能力。
 
 [教学案例](examples/error-budget.md)假设一个视觉检测定位台，要求在规定稳态工况下，X 向误差绝对值不超过 0.50 mm 的概率至少为 95%。在给定偏差上界和随机误差模型下：
 
@@ -109,8 +110,9 @@
 
 ## 参考依据
 
-- [《程序员的自我修养——链接、装载与库》出版方介绍](https://www.cnblogs.com/bvbook/archive/2009/04/15/1436660.html)
-- [NASA Systems Engineering Handbook](https://www.nasa.gov/reference/2-0-fundamentals-of-systems-engineering/)
-- [BIPM：Guides in Metrology](https://www.bipm.org/en/web/guest/publications/guides)
+- 俞甲子、石凡、潘爱民.《程序员的自我修养——链接、装载与库》. 北京：电子工业出版社，2009. ISBN 978-7-121-08511-6.
+- [NASA Systems Engineering Handbook](https://www.nasa.gov/reference/2-0-fundamentals-of-systems-engineering/)；[ISO/IEC/IEEE 15288:2023](https://www.iso.org/standard/81702.html)
+- [BIPM：Guides in Metrology](https://www.bipm.org/en/web/guest/publications/guides)（VIM、GUM 及其补充文件）；中文术语对照 JJF 1001—2011、JJF 1059.1—2012
+- 安全、控制、测量系统分析与环境试验等标准依据，见[能力框架](docs/engineering-framework.md#参考依据)和[术语约定](docs/terminology.md)
 
 框架与工程类比为本项目提出的整理方式；方法说明中的具体来源见各文档。
