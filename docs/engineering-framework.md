@@ -364,7 +364,7 @@
 | --- | --- | --- |
 | C1 | [第1章](problem-and-model/ch01-from-request-to-engineering-problem.md)、[第2章](problem-and-model/ch02-units-datums-and-coordinates.md)、[物理量字典模板](../templates/physical-quantity-reference-dictionary.md)、[术语约定](terminology.md) | 要求条目审查清单 |
 | C2 | [第3章](problem-and-model/ch03-orders-dimensions-and-limits.md)、[一页可行性估算模板](../templates/feasibility-estimate-and-cross-check.md) | 模型卡片与数值收敛检查 |
-| C3 | [误差预算案例](../examples/error-budget.md)、[系统灵敏度](concepts/sensitivity.md) | 资源与时序预算案例 |
+| C3 | [误差预算案例](../examples/error-budget.md)、[系统灵敏度](concepts/sensitivity.md)、[误差统计口径](concepts/error-statistics.md) | 资源与时序预算案例 |
 | C4 | 第2章时间语义部分 | 接口控制文件样例、信号链与采样专题 |
 | C5 | [系统灵敏度](concepts/sensitivity.md)中的 S/T 部分 | 控制性能规格与延迟预算案例 |
 | C6 | [测量性能](concepts/measurement-performance.md) | 测量系统分析与判定规则案例 |

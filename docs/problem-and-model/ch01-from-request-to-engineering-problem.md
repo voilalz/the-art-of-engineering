@@ -208,7 +208,7 @@ $$
 | 误差分位值 | 某一比例结果不超过的误差值 | 比例、统计总体、尾部与估计方法 |
 | 确定性误差边界 | 在规定输入与条件集合内允许的界 | 集合范围、边界依据及未覆盖项 |
 
-准确度、精密度、分辨率、不确定度与允许误差之间的进一步区别，见项目的[测量性能概念辨析](../../docs/concepts/measurement-performance.md)。本章只要求将使用的口径写清，避免相互替代。
+准确度、精密度、分辨率、不确定度与允许误差之间的进一步区别，见项目的[测量性能概念辨析](../concepts/measurement-performance.md)；表中各统计口径的关系与换算前提，见[误差统计口径辨析](../concepts/error-statistics.md)。本章只要求将使用的口径写清，避免相互替代。
 
 ### 1.5.3 响应时间必须有起点与终点
 
@@ -617,4 +617,4 @@ $$
 - **[R12]** JCGM. *JCGM 106:2012: Evaluation of measurement data — The role of measurement uncertainty in conformity assessment*. 用于测量不确定度与符合性判定的关系。 [官方目录及文件入口](https://www.bipm.org/en/web/guest/publications/guides)
 - **[R13]** JCGM. *International Vocabulary of Metrology*, 2.35 Expanded measurement uncertainty. 用于扩展不确定度与覆盖条件的含义。 [官方词条](https://jcgm.bipm.org/vim/en/2.35.html)
 
-相关概念的补充讨论见项目的[测量性能辨析](../../docs/concepts/measurement-performance.md)和[系统灵敏度辨析](../../docs/concepts/sensitivity.md)。
+相关概念的补充讨论见项目的[测量性能辨析](../concepts/measurement-performance.md)和[系统灵敏度辨析](../concepts/sensitivity.md)。

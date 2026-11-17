@@ -21,7 +21,7 @@
 
 启动、稳态、切换、异常和恢复工况分别检查。说明哪些工况未被当前任务覆盖。
 
-涉及“精度”时明确其具体含义：误差边界、重复标准差、RMSE 或分位值等；分辨率、允许误差与测量不确定度分别记录。需要时先对照[概念辨析](../docs/concepts/measurement-performance.md)。
+涉及“精度”时明确其具体含义：误差边界、重复标准差、RMSE 或分位值等；分辨率、允许误差与测量不确定度分别记录。需要时先对照[概念辨析](../docs/concepts/measurement-performance.md)和[误差统计口径](../docs/concepts/error-statistics.md)。
 
 ## 模型、假设与校核
 
