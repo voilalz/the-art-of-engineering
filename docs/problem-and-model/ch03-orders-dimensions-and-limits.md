@@ -579,7 +579,7 @@ $$
 
 若只检查最低和最高频率，会漏掉内部约五倍于静态位移的峰值。温度、负载、速度和控制参数组合也可能通过模式切换、饱和或耦合产生内部最不利点。
 
-![图3-1 频率区间端点与内部共振峰](https://raw.githubusercontent.com/voilalz/the-art-of-engineering/main/assets/figures/ch03-resonance-check.svg)
+![图3-1 频率区间端点与内部共振峰](../../assets/figures/ch03-resonance-check.svg)
 
 **图3-1** 按式（3-30）及上表参数直接计算。空心点为区间端点，实心点为内部幅值峰值；图中以毫米显示位移，正文公式采用米。
 
@@ -694,7 +694,7 @@ $$
 
 尤其需要检查：如果1.6 m/s²只是供应商保证“至少能够达到”的能力下限，而实际允许更大加速度，就不能将其当作所有轨迹都不可超过的上限来否决方案。
 
-![图3-2 两种运动轨迹的速度与机械功率](https://raw.githubusercontent.com/voilalz/the-art-of-engineering/main/assets/figures/ch03-motion-profiles.svg)
+![图3-2 两种运动轨迹的速度与机械功率](../../assets/figures/ch03-motion-profiles.svg)
 
 **图3-2** 同一1 m、20 kg教学任务。橙色虚线三角形方案超过1 m/s速度上限；蓝色实线为同时受速度与加速度限制的理想包络轨迹。机械功率正值对应加速，负值对应制动；两条曲线按各自运动时间绘制，瞬时切换加速度的假设尚未包含有限跃度。
 
@@ -850,7 +850,7 @@ $$
 | 关键未决事项 | 上限证据、终点容许集合、开销、驱动与结构机制 | 真实项目应确认后再迁移结论 |
 | 后续动作 | 复核任务剖面和上限；评估资源或任务调整 | 不以任意安全系数代替重新建模 |
 
-配套[一页可行性估算与独立校核模板](https://github.com/voilalz/the-art-of-engineering/blob/main/templates/feasibility-estimate-and-cross-check.md)提供空白工作件，可与第一章任务记录和第二章物理量字典共同使用。
+配套[一页可行性估算与独立校核模板](../../templates/feasibility-estimate-and-cross-check.md)提供空白工作件，可与第一章任务记录和第二章物理量字典共同使用。
 
 ## 3.14 常见混淆与完成标准
 
@@ -889,12 +889,12 @@ $$
 - **[R10]** Burke, J. V., University of Washington. *Linear Analysis*, lecture notes on differential inequalities and real scalar comparison. 用于比较定理的条件及适用范围。 [作者讲义](https://sites.math.washington.edu/~burke/crs/554/lectures/b-lecture22.pdf)
 - **[R11]** NIST. *Digital Library of Mathematical Functions*, §3.1(ii) Interval Arithmetic. 用于带适当舍入的计算包含区间。 [官方正文](https://dlmf.nist.gov/3.1)
 - **[R12]** Tedrake, R., MIT. *Underactuated Robotics*, Dynamic Programming: Optimal Control Formulations for the Double Integrator. 用于受限输入与最短时间的基本结构。 [作者教材](https://underactuated.csail.mit.edu/dp.html)
-- **[R13]** COMSOL. *Theory for the Thermal Capacitor and Thermal Mass Components*, version 6.3. 用于集总热容、Biot数及常用近似条件；不将其经验阈值作为所有热问题的统一误差保证。 [官方模型文档](https://doc.comsol.com/6.3/doc/com.comsol.help.heat/heat_ug_theory.07.039.html)
+- **[R13]** Bergman, T. L.; Lavine, A. S.; Incropera, F. P.; DeWitt, D. P. *Fundamentals of Heat and Mass Transfer*, 7th ed., Wiley, 2011, §5.1–5.2 集总热容法与Biot数。COMSOL. *Theory for the Thermal Capacitor and Thermal Mass Components*, version 6.3，作软件实现层面的补充。两者用于集总热容、Biot数及常用近似条件；不将其经验阈值作为所有热问题的统一误差保证。 [官方模型文档](https://doc.comsol.com/6.3/doc/com.comsol.help.heat/heat_ug_theory.07.039.html)
 - **[R14]** University of Alberta, Engineering Open Educational Resources. *Forced Vibrations of Damped Single Degree of Freedom Systems: Damped Spring Mass System*. 用于受迫振动幅频关系及内部峰值。 [作者课程](https://engcourses-uofa.ca/books/vibrations-and-sound/forced-vibrations-of-damped-single-degree-of-freedom-systems/damped-spring-mass-system/)
 - **[R15]** NASA. *NASA-STD-7009B: Standard for Models and Simulations*, 2024；配套 *NASA-HDBK-7009B*, 2026. 用于模型用途、可信度和证据的组织思想；具体项目的适用要求另行确定。 [标准](https://standards.nasa.gov/sites/default/files/standards/NASA/B/1/NASA-STD-7009B-Final-3-5-2024.pdf)；[配套手册入口](https://standards.nasa.gov/standard/nasa/nasa-hdbk-7009)
 - **[R16]** MIT Unified Engineering. *Control Volume Form of the System Laws*, section 2.5. 用于开放系统能量、流动功及焓的关系。 [作者课程](https://web.mit.edu/16.unified/www/SPRING/thermodynamics/notes/node18.html)
 
-前置定义见[第一章](https://github.com/voilalz/the-art-of-engineering/blob/main/docs/problem-and-model/ch01-from-request-to-engineering-problem.md)和[第二章](https://github.com/voilalz/the-art-of-engineering/blob/main/docs/problem-and-model/ch02-units-datums-and-coordinates.md)。
+前置定义见[第一章](./ch01-from-request-to-engineering-problem.md)和[第二章](./ch02-units-datums-and-coordinates.md)。
 
 
 

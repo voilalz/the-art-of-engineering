@@ -652,7 +652,7 @@ $$
 
 ### 2.12.3 最小交付与检查
 
-本章配套提供[物理量与基准字典模板](https://github.com/voilalz/the-art-of-engineering/blob/main/templates/physical-quantity-reference-dictionary.md)，可以为每个关键数据条目复制填写。
+本章配套提供[物理量与基准字典模板](../../templates/physical-quantity-reference-dictionary.md)，可以为每个关键数据条目复制填写。
 
 交付时应同时给出至少一个正常值、一个正方向或已知基准值、一个无效状态样例，以及必要的逆变换或复核结果。参数、基准或时钟定义变化后，需要更新对应版本及已验证样例。
 
@@ -698,7 +698,7 @@ $$
 - **[R16]** ROS 2 Design. *Clock and Time*. 用于系统、稳态和仿真时间的语义区分。 [官方设计文档](https://design.ros2.org/articles/clock_and_time.html)
 - **[R17]** NIST. *Technical Note 1297*, Appendix A: Law of Propagation of Uncertainty. 用于局部一阶不确定度传播。 [官方正文](https://www.nist.gov/pml/nist-technical-note-1297/nist-tn-1297-appendix-law-propagation-uncertainty)
 
-相关任务和指标语义见[第一章](https://github.com/voilalz/the-art-of-engineering/blob/main/docs/problem-and-model/ch01-from-request-to-engineering-problem.md)。
+相关任务和指标语义见[第一章](./ch01-from-request-to-engineering-problem.md)。
 
 
 

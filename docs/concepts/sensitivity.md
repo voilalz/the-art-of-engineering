@@ -14,7 +14,7 @@
 
 ## 测量灵敏度：输入变化，示值变化多少
 
-VIM 将测量系统灵敏度定义为示值变化与对应被测量变化的比值，并指出它可能随工作点改变。[S1] 对可微的局部模型，可用：
+VIM 将测量系统灵敏度定义为示值变化与对应被测量变化的比值，并指出它可能随工作点改变。[R1] 对可微的局部模型，可用：
 
 $$
 K_x=\left.\frac{\partial z}{\partial x}\right|_{x_0},\qquad \Delta z\approx K_x\Delta x
@@ -64,7 +64,7 @@ $$
 c_i=\frac{\partial f}{\partial p_i},\qquad \Delta y\approx\sum_i c_i\Delta p_i
 $$
 
-这里的 $p_i$ 可以是尺寸、标定参数、时间偏差、温度或其他误差输入。NIST 的不确定度传播说明将这些偏导数称为灵敏度系数。[S2]
+这里的 $p_i$ 可以是尺寸、标定参数、时间偏差、温度或其他误差输入。NIST 的不确定度传播说明将这些偏导数称为灵敏度系数。[R2]
 
 例如恒速近似下 $x=v\tau$，对时间误差的灵敏度为 $\partial x/\partial\tau=v$。在 v=0.20 m/s、时间误差标准差为 0.20 ms 时，仅该项折算的位置标准差约为 0.04 mm，与本项目[误差预算案例](../../examples/error-budget.md)一致。
 
@@ -78,7 +78,7 @@ $$
 P_y\approx JP_pJ^{\mathsf T}
 $$
 
-输入不相关、输出为标量时，各项方差贡献为 $c_i^2u_i^2$；输入相关时还要保留交叉项。[S2] 因此，优先改进哪项，要同时考虑来源幅度、相关性、可改善程度和成本。
+输入不相关、输出为标量时，各项方差贡献为 $c_i^2u_i^2$；输入相关时还要保留交叉项。[R2] 因此，优先改进哪项，要同时考虑来源幅度、相关性、可改善程度和成本。
 
 ### 相对灵敏度用于比较比例变化
 
@@ -95,7 +95,7 @@ $$
 
 以下限定为线性时不变、单输入单输出、单位负反馈，并要求所讨论的闭环内部稳定。设被控对象为 P(s)，控制器为 C(s)，环路传递函数为 $L(s)=P(s)C(s)$。
 
-灵敏度函数与互补灵敏度函数为：[S3][S4]
+灵敏度函数与互补灵敏度函数为：[R3][R4]
 
 $$
 S(s)=\frac{1}{1+L(s)},\qquad T(s)=\frac{L(s)}{1+L(s)},\qquad S(s)+T(s)=1
@@ -150,7 +150,7 @@ $$
 \frac{P}{T}\frac{\partial T}{\partial P}=S
 $$
 
-因此在适用工作点或频率上，有 $\Delta T/T\approx S\,\Delta P/P$。这将闭环灵敏度函数与“闭环传递特性对对象变化的相对敏感程度”连接起来。[S3]
+因此在适用工作点或频率上，有 $\Delta T/T\approx S\,\Delta P/P$。这将闭环灵敏度函数与“闭环传递特性对对象变化的相对敏感程度”连接起来。[R3]
 
 S 与 T 的关系也约束性能取舍：同一频率处两者不能都很小。$S+T=1$ 是传递函数的复数关系，不能写成 $|S|+|T|=1$。还需结合稳定性、控制量、模型不确定性和测量噪声评估；多变量或非单位反馈结构需要按实际关系重新推导。
 
@@ -167,9 +167,9 @@ S 与 T 的关系也约束性能取舍：同一频率处两者不能都很小。
 
 ## 主要来源
 
-- **[S1]** [VIM 4.12：sensitivity of a measuring system](https://jcgm.bipm.org/vim/en/4.12.html)。
-- **[S2]** [NIST TN 1297 Appendix A：Law of Propagation of Uncertainty](https://www.nist.gov/pml/nist-technical-note-1297/nist-tn-1297-appendix-law-propagation-uncertainty)。
-- **[S3]** [Åström，Feedback Fundamentals，Caltech 作者课程资料](https://www.cds.caltech.edu/~murray/courses/cds101/fa02/caltech/astrom-ch5.pdf)，用于核对反馈传递关系和相对灵敏度。
-- **[S4]** [Åström / Murray，Loop Shaping，作者书稿](https://www.cds.caltech.edu/~murray/books/AM08/pdf/am06-loopsyn_16Sep06.pdf)，用于核对 S/T 及性能取舍。
+- **[R1]** [VIM 4.12：sensitivity of a measuring system](https://jcgm.bipm.org/vim/en/4.12.html)。
+- **[R2]** [NIST TN 1297 Appendix A：Law of Propagation of Uncertainty](https://www.nist.gov/pml/nist-technical-note-1297/nist-tn-1297-appendix-law-propagation-uncertainty)。
+- **[R3]** [Åström，Feedback Fundamentals，Caltech 作者课程资料](https://www.cds.caltech.edu/~murray/courses/cds101/fa02/caltech/astrom-ch5.pdf)，用于核对反馈传递关系和相对灵敏度。
+- **[R4]** [Åström / Murray，Loop Shaping，作者书稿](https://www.cds.caltech.edu/~murray/books/AM08/pdf/am06-loopsyn_16Sep06.pdf)，用于核对 S/T 及性能取舍。
 
 传感器、参数和低阶控制系统的数值均为本文教学示例；信号位置与推导条件在正文给出。

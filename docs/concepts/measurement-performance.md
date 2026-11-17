@@ -2,14 +2,14 @@
 
 “这台设备精度很高”在工程讨论中可能指测得准、重复性好、显示位数多，甚至只是响应明显。先把这些意思分开，才能比较设备或形成验收要求。
 
-本说明以计量学 VIM 的概念为基准。中文“精度”在实际资料中用法不一，建议在正式技术文件中注明所指的准确度、精密度、误差界或其他具体指标。[S1][S2]
+本说明以计量学 VIM 第 3 版（JCGM 200:2012）的概念为基准，中文译名对照 JJF 1001—2011《通用计量术语及定义》；VIM 第 4 版发布后应复核措辞。中文“精度”在实际资料中用法不一，建议在正式技术文件中注明所指的准确度、精密度、误差界或其他具体指标。[R1][R2]
 
 ## 先建立概念之间的分工
 
 | 概念 | 回答的问题 | 常用表达或量化方式 | 不能直接推出什么 |
 | --- | --- | --- | --- |
 | 测量准确度 accuracy | 测得的值与被测量真值有多接近 | 定性概念；具体性能用明确误差指标等说明 | 不能由显示位数或一个标准差单独确定 |
-| 测量正确度 trueness | 重复测量的长期平均与参考值有多接近 | 定性概念，常通过偏差估计考察 | 平均接近参考，不代表每次结果都集中 |
+| 测量正确度 trueness | 重复测量的长期平均与参考值有多接近 | 定性概念，常通过偏差（bias）估计考察 | 平均接近参考，不代表每次结果都集中 |
 | 测量精密度 precision | 规定条件下，重复结果彼此有多接近 | 标准差、方差等，注明重复条件 | 结果集中，不代表没有共同偏差 |
 | 测量误差 error | 某个测得值相对参考值偏了多少 | 有符号差值 $e=x-x_{\mathrm{ref}}$ | 单次误差不能代表整个量程与全部工况 |
 | 分辨率 resolution | 被测量至少变化多少，才使示值发生可感知变化 | 输入端的变化量，注明条件 | 能分辨细小变化，不代表绝对值准确 |
@@ -17,7 +17,7 @@
 | 测量不确定度 uncertainty | 依据现有信息，结果所对应的量值有多大分散性 | 标准不确定度，或注明覆盖条件的扩展不确定度 | 不是已经知道的实际误差，也不是允许误差 |
 | 最大允许误差 MPE | 在规定条件下，允许的误差边界是多少 | 如规定范围内 $\lvert e\rvert\leq0.02$ mm | 这是要求边界，不是每次实际误差或标准差 |
 
-准确度和正确度在 VIM 中不是带数值的量；精密度可用表征分散性的统计量表达。[S1][S2][S3] 最大允许误差则属于规格或规定允许的误差极值。[S9] 设备资料中的“accuracy ±…”常是对某个数值性能规定的简称，使用时应确认它具体保证什么、适用什么条件。
+准确度和正确度在 VIM 中不是带数值的量；精密度可用表征分散性的统计量表达。[R1][R2][R3] 最大允许误差则属于规格或规定允许的误差极值。[R9] 设备资料中的“accuracy ±…”常是对某个数值性能规定的简称，使用时应确认它具体保证什么、适用什么条件。
 
 ## 用一组读数看清差别
 
@@ -49,7 +49,7 @@ $$
 x_i-x_{\mathrm{ref}}=b+\varepsilon_i,\qquad E[\varepsilon_i]=0
 $$
 
-$b$ 表示该模型下的偏差，$\varepsilon_i$ 表示随机变化。两部分分别对应“整体偏到哪里”和“每次散得多开”。
+$b$ 表示该模型下的偏差（bias，JJF 1001—2011 译作“测量偏移”，即系统测量误差的估计值），$\varepsilon_i$ 表示随机变化。两部分分别对应“整体偏到哪里”和“每次散得多开”。
 
 如果随机项方差为 $\sigma^2$，则这个模型中的均方误差满足：
 
@@ -69,7 +69,7 @@ $$
 
 ## 为什么分辨率高，仍然可能测不准
 
-VIM 分别定义测量系统分辨率和显示分辨率；实际分辨能力还可能受到噪声、摩擦和工作点等影响。[S4][S5]
+VIM 分别定义测量系统分辨率和显示分辨率；实际分辨能力还可能受到噪声、摩擦和工作点等影响。[R4][R5]
 
 把显示从两位小数改成三位小数，只改变输出格式，不会自动消除零偏、非线性、温漂、安装误差或参考基准误差。实际系统即使有很小的数字步进，也可能因为噪声和漂移而无法可靠区分同样小的输入变化。
 
@@ -79,9 +79,9 @@ $$
 u_q=\frac{q}{\sqrt{12}}
 $$
 
-这个结果来自所假定矩形分布的标准差关系。[S10] 它只是量化这一项的标准不确定度模型，不能代表整个仪器的不确定度。有限分辨率与噪声的相互作用需要保留模型前提。[S7]
+这个结果来自所假定矩形分布的标准差关系。[R10] 它只是量化这一项的标准不确定度模型，不能代表整个仪器的不确定度。有限分辨率与噪声的相互作用需要保留模型前提。[R7]
 
-同理，多次平均可以在合适的独立、零均值随机模型下减小均值的随机分散，约按 $1/\sqrt n$ 缩小；共同偏差和慢漂不会因此自动消失。重复读出同一个量化码，也不能仅凭增加次数产生新的信息。[S7][S8]
+同理，多次平均可以在合适的独立、零均值随机模型下减小均值的随机分散，约按 $1/\sqrt n$ 缩小；共同偏差和慢漂不会因此自动消失。重复读出同一个量化码，也不能仅凭增加次数产生新的信息。[R7][R8]
 
 ## 灵敏度怎样与分辨率联系
 
@@ -97,7 +97,7 @@ $$
 
 ## 不确定度为什么需要单独报告
 
-误差是测得值与参考值的差，不确定度是依据所用信息对结果分散性的表征。[S6] 实际真值往往未知，能做的是利用参考测量、标定、重复数据、资料与模型，评估结果及其不确定度。
+误差是测得值与参考值的差，不确定度是依据所用信息对结果分散性的表征。[R6] 实际真值往往未知，能做的是利用参考测量、标定、重复数据、资料与模型，评估结果及其不确定度。
 
 标准不确定度和扩展不确定度也不同。写“结果 ±U”时，应明确 $U$ 的含义、覆盖因子或覆盖概率及评定条件。最大允许误差属于产品或任务要求；不确定度则参与判断现有测量证据是否足以说明符合要求。
 
@@ -115,15 +115,15 @@ $$
 
 ## 主要来源
 
-- **[S1]** [VIM 2.13：measurement accuracy](https://jcgm.bipm.org/vim/en/2.13.html)。
-- **[S2]** [VIM 2.15：measurement precision](https://jcgm.bipm.org/vim/en/2.15.html)。
-- **[S3]** [VIM 2.14：measurement trueness](https://jcgm.bipm.org/vim/en/2.14.html)。
-- **[S4]** [VIM 4.14：resolution](https://jcgm.bipm.org/vim/en/4.14.html)。
-- **[S5]** [VIM 4.15：resolution of a displaying device](https://jcgm.bipm.org/vim/en/4.15.html)。
-- **[S6]** [VIM 2.16：measurement error](https://jcgm.bipm.org/vim/en/2.16.html) 与 [VIM 2.26：measurement uncertainty](https://jcgm.bipm.org/vim/en/2.26.html)。
-- **[S7]** [NIST：Uncertainty Due to Finite Resolution Measurements](https://www.nist.gov/publications/uncertainty-due-finite-resolution-measurements-0)。
-- **[S8]** [NIST：Noise Averaging and Measurement Resolution](https://www.nist.gov/publications/noise-averaging-and-measurement-resolution-or-little-noise-good-thing-0)。
-- **[S9]** [VIM 4.26：maximum permissible measurement error](https://jcgm.bipm.org/vim/en/4.26.html)。
-- **[S10]** [GUM 第 4 节：Evaluating standard uncertainty](https://www.iso.org/sites/JCGM/GUM/JCGM100/C045315e-html/C045315e_FILES/MAIN_C045315e/04_e.html)，用于对照矩形分布与均值的标准不确定度模型。
+- **[R1]** [VIM 2.13：measurement accuracy](https://jcgm.bipm.org/vim/en/2.13.html)。
+- **[R2]** [VIM 2.15：measurement precision](https://jcgm.bipm.org/vim/en/2.15.html)。
+- **[R3]** [VIM 2.14：measurement trueness](https://jcgm.bipm.org/vim/en/2.14.html)。
+- **[R4]** [VIM 4.14：resolution](https://jcgm.bipm.org/vim/en/4.14.html)。
+- **[R5]** [VIM 4.15：resolution of a displaying device](https://jcgm.bipm.org/vim/en/4.15.html)。
+- **[R6]** [VIM 2.16：measurement error](https://jcgm.bipm.org/vim/en/2.16.html) 与 [VIM 2.26：measurement uncertainty](https://jcgm.bipm.org/vim/en/2.26.html)。
+- **[R7]** [NIST：Uncertainty Due to Finite Resolution Measurements](https://www.nist.gov/publications/uncertainty-due-finite-resolution-measurements-0)。
+- **[R8]** [NIST：Noise Averaging and Measurement Resolution](https://www.nist.gov/publications/noise-averaging-and-measurement-resolution-or-little-noise-good-thing-0)。
+- **[R9]** [VIM 4.26：maximum permissible measurement error](https://jcgm.bipm.org/vim/en/4.26.html)。
+- **[R10]** [GUM 第 4 节：Evaluating standard uncertainty](https://www.iso.org/sites/JCGM/GUM/JCGM100/C045315e-html/C045315e_FILES/MAIN_C045315e/04_e.html)，用于对照矩形分布与均值的标准不确定度模型。
 
 上述数值与简单统计模型用于本文的工程解释，不能代替设备在指定工况下的完整性能试验。
