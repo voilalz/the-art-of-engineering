@@ -4,6 +4,12 @@
 
 这份框架用于处理这些关系。使用时，选择一个具体任务，从它的要求、模型、预算、接口和验证记录开始，逐步补齐关键缺项。可以配合[任务记录模板](../templates/engineering-task.md)使用。全库用词以[术语约定](terminology.md)为准，例如“要求”与“需要”、“余量”与“裕度”、“故障”与“失效”的区分。
 
+“问题与模型”的首篇完整正文为[第1章：从一句要求，到一个工程问题](problem-and-model/ch01-from-request-to-engineering-problem.md)，对任务、场景、边界和模型作出定义，并通过公式与算例讨论数值要求的形成和证据。
+
+[第2章：单位、基准与坐标](problem-and-model/ch02-units-datums-and-coordinates.md)继续统一数据语义，重点区分运动参考、求导参考与分量表达基，并提供[物理量与基准字典模板](../templates/physical-quantity-reference-dictionary.md)。
+
+[第3章：数量级、量纲与极限](problem-and-model/ch03-orders-dimensions-and-limits.md)讨论早期可行性判断，推导方向可靠的上下界，并用时间、力、能量和功率互相校核。配套提供[一页可行性估算模板](../templates/feasibility-estimate-and-cross-check.md)。
+
 ## 框架结构
 
 框架由 11 项能力组成。生命周期过程的划分参照 ISO/IEC/IEEE 15288 与 NASA 系统工程手册[R1][R6]；能力的分组和命名是本库的整理方式。
