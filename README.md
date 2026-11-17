@@ -46,7 +46,7 @@
 | 单位、基准与坐标 | 正式研究正文：量值、参考、运动关系、坐标表达、时间与不确定度换算 | [阅读第二章](docs/problem-and-model/ch02-units-datums-and-coordinates.md) |
 | 数量级、量纲与极限 | 正式研究正文：物理边界、守恒、可靠上下界、尺度关系与独立校核 | [阅读第三章](docs/problem-and-model/ch03-orders-dimensions-and-limits.md) |
 | 工程概念辨析 | 区分精度、误差、分辨率、灵敏度与误差统计口径等容易混淆的术语，并落实到工程决策 | [概念辨析入口](docs/concepts/README.md) |
-| 工程共性能力框架 | 11 项能力：从要求、模型、预算、接口、控制、测量、集成、制造可靠性、安全、取舍风险到验证配置，附生命周期对照与能力分级 | [能力框架](docs/engineering-framework.md) |
+| 工程共性能力框架 | 梳理具体任务需要哪些方法、工作产物与检查动作，覆盖控制裕度、测量系统分析、公差与可靠性、安全和技术风险，附能力分级 | [能力框架](docs/engineering-framework.md) |
 | 术语约定 | 统一“要求/需要”“偏差/误差”“余量/裕度”“故障/失效”等全库用词及其标准依据 | [术语约定](docs/terminology.md) |
 | 误差预算教学案例 | 算清独立误差、相关误差、偏差上界与总体余量的关系 | [误差预算案例](examples/error-budget.md) |
 | 工程任务记录模板 | 把一个实际任务的要求、模型、预算、接口、试验和配置串起来 | [复制模板](templates/engineering-task.md) |
